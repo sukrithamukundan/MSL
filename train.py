@@ -66,4 +66,4 @@ model.compile(
 model.fit(np.array(data), np.array(labels), epochs=10)
 
 # save the model for later use
-model.save("malayalam-sign-language-model.h5")
+model.save("../Trained-models/malayalam-sign-language-model.h5")

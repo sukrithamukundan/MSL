@@ -1,2 +1,0 @@
-# Malayalam Sign Language Recognision 
-

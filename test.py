@@ -5,7 +5,7 @@ import os
 
 IMG_TEST_PATH = "test_image"
 
-label_lst = ['A','Aa','E','Ee']
+label_lst = ['A','Aa','Ca','E','Ka','Ta','U']
 NUM_CLASSES = len(label_lst)
 REV_CLASS_MAP = {i:label_lst[i] for i in range(NUM_CLASSES)}
 

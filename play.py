@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 from random import choice
 
-label_lst = ['A','Aa','E','Ee','None']
+label_lst = ['A','Aa','Ah','Ai','Am','Au','Ba','Bha','Ca','Cha','D_a','D_ha','Da','Dha','E','E_','Ee','Ee_','Ga','Gha','Ha','I','Ii','Ilh','Ill','In','Inh','Irr','Ja','Ka','Kha','La','Lha','Ma','N_a','Na','Nga','Nha','Nothing','O','Oo','Pa','Pha','R','Ra','Rha','Sa','Sha','Shha','Space','T_a','T_ha','Ta','Tha','U','U_','Uu','Uu_','Va','Ya','Zha']
 NUM_CLASSES = len(label_lst)
 REV_CLASS_MAP = {i:label_lst[i] for i in range(NUM_CLASSES)}
 
@@ -16,7 +16,7 @@ def calculate_winner(move1):
     return "Hai"
 
 
-model = load_model("malayalam-sign-language-model.h5")
+model = load_model("../Trained-models/malayalam-sign-language-model.h5")
 
 cap = cv2.VideoCapture(0)
 
@@ -25,7 +25,7 @@ prev_move = None
 while True:
     ret, frame = cap.read()
     if not ret:
-        continueq
+        continue
 
     # rectangle for user to play
     cv2.rectangle(frame, (100, 100), (500, 500), (255, 255, 255), 2)
@@ -51,7 +51,7 @@ while True:
 
     # display the information
     font = cv2.FONT_HERSHEY_SIMPLEX
-    cv2.putText(frame, "Your Move: " + user_move_name,
+    cv2.putText(frame, "Alphabet: " + user_move_name,
                 (50, 50), font, 1.2, (255, 255, 255), 2, cv2.LINE_AA)
     cv2.putText(frame, "Winner: " + winner,
                 (400, 600), font, 2, (0, 0, 255), 4, cv2.LINE_AA)

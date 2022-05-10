@@ -9,7 +9,7 @@ import tensorflow as tf
 import os
 IMG_SAVE_PATH = 'image_data'
 
-label_lst = ['A','Aa','Ca','E','Ka','Ta','U']
+label_lst = ['A','Aa','Ah','Ai','Am','Au','Ba','Bha','Ca','Cha','D_a','D_ha','Da','Dha','E','E_','Ee','Ee_','Ga','Gha','Ha','I','Ii','Ilh','Ill','In','Inh','Irr','Ja','Ka','Kha','La','Lha','Ma','N_a','Na','Nga','Nha','Nothing','O','Oo','Pa','Pha','R','Ra','Rha','Sa','Sha','Shha','Space','T_a','T_ha','Ta','Tha','U','U_','Uu','Uu_','Va','Ya','Zha']
 NUM_CLASSES = len(label_lst)
 CLASS_MAP = {label_lst[i]:i for i in range(NUM_CLASSES)}
 

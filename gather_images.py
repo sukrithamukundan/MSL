@@ -38,7 +38,7 @@ except FileExistsError:
     print("{} directory already exists.".format(IMG_CLASS_PATH))
     print("All images gathered will be saved along with existing items in this folder")
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture("https://192.168.43.1:8080/video")
 
 start = False
 count = 0
@@ -51,10 +51,10 @@ while True:
     if count == num_samples:
         break
 
-    cv2.rectangle(frame, (100, 100), (500, 500), (255, 255, 255), 2)
+    cv2.rectangle(frame, (100, 100), (800, 800), (255, 255, 255), 2)
 
     if start:
-        roi = frame[100:500, 100:500]
+        roi = frame[100:800, 100:800]
         save_path = os.path.join(IMG_CLASS_PATH, '{}.jpg'.format(count + 1))
         cv2.imwrite(save_path, roi)
         count += 1

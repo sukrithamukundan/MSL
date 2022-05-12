@@ -16,7 +16,7 @@ def calculate_winner(move1):
     return "Hai"
 
 
-model = load_model("../Trained-models/malayalam-sign-language-model.h5")
+model = load_model("malayalam-sign-language-model.h5")
 
 cap = cv2.VideoCapture(0)
 

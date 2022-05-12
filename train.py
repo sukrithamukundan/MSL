@@ -63,7 +63,7 @@ model.compile(
 )
 
 # start training
-model.fit(np.array(data), np.array(labels), epochs=10)
+model.fit(np.array(data), np.array(labels), epochs=4)
 
 # save the model for later use
 model.save("malayalam-sign-language-model.h5")

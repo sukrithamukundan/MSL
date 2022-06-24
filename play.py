@@ -18,7 +18,8 @@ def calculate_winner(move1):
 
 model = load_model("malayalam-sign-language-model.h5")
 
-cap = cv2.VideoCapture(0)
+
+cap = cv2.VideoCapture(1)
 
 prev_move = None
 
@@ -27,16 +28,16 @@ while True:
     if not ret:
         continue
 
-    # rectangle for user to play
-    cv2.rectangle(frame, (100, 100), (500, 500), (255, 255, 255), 2)
+    # rectangle for user to input
+    cv2.rectangle(frame, (100, 100), (800, 800), (255, 255, 255), 2)
     
 
     # extract the region of image within the user rectangle
-    roi = frame[100:500, 100:500]
+    roi = frame[100:800, 100:800]
     img = cv2.cvtColor(roi, cv2.COLOR_BGR2RGB)
     img = cv2.resize(img, (227, 227))
 
-    # predict the move made
+    # predict the sign
     pred = model.predict(np.array([img]))
     move_code = np.argmax(pred[0])
     user_move_name = mapper(move_code)

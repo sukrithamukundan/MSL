@@ -25,7 +25,7 @@ except:
     print(desc)
     exit(-1)
 
-IMG_SAVE_PATH = 'image_data'
+IMG_SAVE_PATH = 'image_data_2'
 IMG_CLASS_PATH = os.path.join(IMG_SAVE_PATH, label_name)
 
 try:

@@ -7,7 +7,7 @@ from keras.layers import Activation, Dropout, Convolution2D, GlobalAveragePoolin
 from keras.models import Sequential
 import tensorflow as tf
 import os
-IMG_SAVE_PATH = 'image_data'
+IMG_SAVE_PATH = 'image_data_2'
 
 label_lst = ['A','Aa','Ah','Ai','Am','Au','Ba','Bha','Ca','Cha','D_a','D_ha','Da','Dha','E','E_','Ee','Ee_','Ga','Gha','Ha','I','Ii','Ilh','Ill','In','Irr','Ja','Ka','Kha','La','Lha','Ma','N_a','Na','Nga','Nha','Nothing','O','Oo','Pa','Pha','R','Ra','Rha','Sa','Sha','Shha','Space','T_a','T_ha','Ta','Tha','U','U_','Uu','Uu_','Va','Ya','Zha']
 NUM_CLASSES = len(label_lst)
@@ -66,4 +66,4 @@ model.compile(
 model.fit(np.array(data), np.array(labels), epochs=4)
 
 # save the model for later use
-model.save("malayalam-sign-language-model.h5")
+model.save("malayalam-sign-language-model_2.h5")

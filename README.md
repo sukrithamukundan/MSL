@@ -13,7 +13,9 @@ This project aims at introducing a mobile application that recognizes these Mala
 
 [Codebase for Sahayi Model Creation](https://github.com/sukrithamukundan/Sahaayi---Model-Creation)
 
-[Datasets used](https://github.com/sukrithamukundan/Sahaayi---Model-Creation/tree/master/image_data, https://github.com/sukrithamukundan/Sahaayi---Model-Creation/tree/master/image_data_2)
+[Dataset used](https://github.com/sukrithamukundan/Sahaayi---Model-Creation/tree/master/image_data)
+
+[Dataset used](https://github.com/sukrithamukundan/Sahaayi---Model-Creation/tree/master/image_data_2)
 
 [Project Presentation](https://github.com/sukrithamukundan/Sahaayi---Model-Creation/blob/master/Project%20Presentation.pdf)
 
